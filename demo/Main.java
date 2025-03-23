@@ -13,6 +13,7 @@ public class Main {
     Counter counter = new Counter(service.isTreadSafe(args));
     int loop = 100000;
 
+    // 同じインスタンスを別スレッドで同時に使う
     Thread t1 = new Thread(() -> {
       for (int i = 0; i < loop; i++) {
         counter.increment();
@@ -34,6 +35,8 @@ public class Main {
     } catch (InterruptedException e) {
       System.out.println(e.getMessage());
     }
-    System.out.println(counter.getCount()); // Thread Safeなら200000が表示されるはず
+
+    // Thread Safeなら200000が表示されるはず
+    System.out.println(counter.getCount());
   }
 }
