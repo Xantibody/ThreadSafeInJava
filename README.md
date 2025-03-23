@@ -15,10 +15,10 @@ javac demo/Main.java
 
 ## Usage
 ```bash
-# TreadSafe
+# Thread Safe
 java demo/Main.java SAFE
 ```
 ```bash
-# unsafe
+# Unsafe
 java demo/Main.java ${other than "SAFE"}
 ```
