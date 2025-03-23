@@ -34,6 +34,6 @@ public class Main {
     } catch (InterruptedException e) {
       System.out.println(e.getMessage());
     }
-    System.out.println(counter.getCount()); // 2000が表示されるはず
+    System.out.println(counter.getCount()); // Thread Safeなら200000が表示されるはず
   }
 }
